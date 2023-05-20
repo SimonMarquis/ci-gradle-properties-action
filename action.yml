@@ -1,5 +1,5 @@
 name: 'Setup gradle.properties file'
-description: 'Copy gradle.properties file to the user''s home directory.'
+description: 'Copy Gradle properties file to the CI''s home directory.'
 author: 'Simon Marquis'
 branding:
   icon: 'package'
