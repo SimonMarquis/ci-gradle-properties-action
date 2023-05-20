@@ -24,9 +24,9 @@ runs:
         cp "$FILE" ~/.gradle/gradle.properties
 
     - if: runner.os == 'Windows'
-      shell: cmd
+      shell: pwsh
       env:
         FILE: ${{ inputs.path }}
       run: |
-        mkdir $HOME\.gradle
-        cp $FILE $HOME\.gradle\gradle.properties
+        mkdir "$HOME\.gradle"
+        cp "$env:FILE $HOME\.gradle\gradle.properties"
