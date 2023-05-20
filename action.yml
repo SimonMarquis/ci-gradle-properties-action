@@ -21,7 +21,7 @@ runs:
         FILE: ${{ inputs.path }}
       run: |
         mkdir -p ~/.gradle
-        cp $FILE ~/.gradle/gradle.properties
+        cp "$FILE" ~/.gradle/gradle.properties
 
     - if: runner.os == 'Windows'
       shell: cmd
