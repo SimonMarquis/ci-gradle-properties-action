@@ -29,4 +29,4 @@ runs:
         FILE: ${{ inputs.path }}
       run: |
         mkdir "$HOME\.gradle"
-        cp "$env:FILE $HOME\.gradle\gradle.properties"
+        cp "$env:FILE" "$HOME\.gradle\gradle.properties"
