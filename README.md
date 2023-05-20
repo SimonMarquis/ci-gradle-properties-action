@@ -1,4 +1,4 @@
-# CI Gradle properties
+# 🐘 CI Gradle properties
 
 Copy Gradle properties file to the CI's home directory.  
 This is especially useful if you need to provide (or override) specific properties on top of the project's properties. 
