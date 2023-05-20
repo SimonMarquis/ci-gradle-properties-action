@@ -1,0 +1,32 @@
+name: 'Setup gradle.properties file'
+description: 'Copy gradle.properties file to the user''s home directory.'
+author: 'Simon Marquis'
+branding:
+  icon: 'package'
+  color: 'blue'
+
+inputs:
+  file:
+    description: 'gradle.properties file path'
+    default: '.github/gradle.properties'
+    required: true
+
+runs:
+  using: composite
+  steps:
+
+    - if: runner.os == 'Linux' || runner.os == 'macOS'
+      shell: bash
+      env:
+        FILE: ${{ inputs.file }}
+      run: |
+        mkdir -p ~/.gradle
+        cp $FILE ~/.gradle/gradle.properties
+
+    - if: runner.os == 'Windows'
+      shell: cmd
+      env:
+        FILE: ${{ inputs.file }}
+      run: |
+        mkdir $HOME\.gradle
+        cp $FILE $HOME\.gradle\gradle.properties
