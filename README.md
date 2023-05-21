@@ -1,6 +1,6 @@
 # 🐘 CI Gradle properties
 
-Copy Gradle properties file to the CI's home directory.  
+Copy [Gradle properties](https://docs.gradle.org/current/userguide/build_environment.html#sec:gradle_configuration_properties) file to the CI's home directory.  
 This is especially useful if you need to provide (or override) specific properties on top of the project's properties. 
 
 ## Usage
