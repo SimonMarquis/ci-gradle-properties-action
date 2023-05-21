@@ -9,10 +9,10 @@ See [action.yml](https://github.com/SimonMarquis/ci-gradle-properties-action/blo
 
 ```yml
 steps:
-- uses: actions/checkout@v3
-- uses: SimonMarquis/ci-gradle-properties-action@v1
-  with:
-    path: .github/gradle.properties
+  - uses: actions/checkout@v3
+  - uses: SimonMarquis/ci-gradle-properties-action@v1
+    with:
+      path: .github/gradle.properties
 ```
 
 | Input  | Description |
